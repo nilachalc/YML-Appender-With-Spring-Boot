@@ -25,15 +25,15 @@ public class YmlService {
 	}
 	
 	public boolean writeYml(DocumentDetails documentDetails) {
-		boolean successMessage = true;
+		boolean success = true;
 		appendYml(documentDetails);
 		try {
 			mapper.writeValue(new File("src/main/resources/Doc.yml"), documents);
 		} catch (IOException e) {
-			successMessage = false;
+			success = false;
 			e.printStackTrace();
 		}
-		return successMessage;
+		return success;
 	}
 	
 	private void appendYml(DocumentDetails documentDetails) {

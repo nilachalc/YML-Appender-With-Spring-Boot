@@ -17,12 +17,15 @@ public class YmlController {
 	private YmlService service; 
 	
 	@PostMapping("/postendpoint")
-    public void getEndpoint(@RequestBody DocumentDetails documentDetails) {
+    public String getEndpoint(@RequestBody DocumentDetails documentDetails) {
+		String successMessage = "YML File updated successfully.";
 		service.readYml();
         if (service.writeYml(documentDetails)) {
-        	System.out.println("YML File updated successfully.");
+        	System.out.println(successMessage);
         } else {
-        	System.out.println("failed to update YML File.");
+        	successMessage = "failed to update YML File.";
+        	System.out.println(successMessage);
         }
+        return successMessage;
     }
 }
