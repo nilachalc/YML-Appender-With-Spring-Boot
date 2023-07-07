@@ -1,0 +1,17 @@
+---
+documentDetails:
+- serialNumber: "1"
+  documentId: "dc01"
+  pendStatus: "Y"
+- serialNumber: "2"
+  documentId: "dc02"
+  pendStatus: "Y"
+- serialNumber: "3"
+  documentId: "dc03"
+  pendStatus: "N"
+- serialNumber: "5"
+  documentId: "DC06"
+  pendStatus: "N"
+- serialNumber: "7"
+  documentId: "DC07"
+  pendStatus: "Y"
